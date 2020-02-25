@@ -13,7 +13,7 @@ cycler==0.10.0
 decorator==4.4.1
 defusedxml==0.6.0
 dill==0.3.1.1
-Django==2.0.10
+Django==2.2.10
 django-cors-headers==2.4.0
 django-hosts==3.0
 djangorestframework==3.8.2
