@@ -1,3 +1,10 @@
 
-plant_project/api_plant_detection/ml_files/*
+plant_disease/plant_project/ml_files/*
+
+plant_disease/plant_project/venv/
+
+plant_disease/webserver/media/*
+
+
+
 
