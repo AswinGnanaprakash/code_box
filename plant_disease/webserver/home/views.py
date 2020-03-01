@@ -52,7 +52,8 @@ def home_page(request):
             print(cwd)
             val = image_as_base64(cwd+'/media/'+image_file)
             answers  = val['data']
-            return render(request, 'show.html', {'values' :answers})
+            suggestion = val['suggestion']
+            return render(request, 'show.html', {'values' :answers, 'suggestion' : suggestion})
 
     else:
         form = ImageUpload()

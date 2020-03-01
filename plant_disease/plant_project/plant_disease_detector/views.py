@@ -39,15 +39,21 @@ def predict_plant_disease(request):
             request_data = request.data["plant_image"]
             header, image_data = request_data.split(';base64,')
             image_array, err_msg = image_converter.convert_image(image_data)
+
             if err_msg == None :
                 model_file = f"{BASE_DIR}/ml_files/sequential.pkl"
                 saved_classifier_model = pickle.load(open(model_file, 'rb'))
                 prediction = saved_classifier_model.predict(image_array)
                 label_binarizer = pickle.load(open(f"{BASE_DIR}/ml_files/label_bin.pkl",'rb'))
+                disease_name = label_binarizer.inverse_transform(prediction)[0]
+
+                f = open(f"cure_data/{disease_name}.txt", "r+")
+                suggestion = f.read()
     
                 return_data = {
                     "error" : "0",
-                    "data" : f"{label_binarizer.inverse_transform(prediction)[0]}"
+                    "data" : f"{disease_name}",
+                    "suggestion" : f"{suggestion}"
                 }            
     
     return HttpResponse(json.dumps(return_data), content_type='application/json; charset=utf-8')
