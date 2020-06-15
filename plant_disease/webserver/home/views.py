@@ -49,7 +49,6 @@ def home_page(request):
             issue_list = plant.objects.all()
             image_file = str(issue_list.last().upload_your_image)
             cwd = os.getcwd()
-            print(cwd)
             val = image_as_base64(cwd+'/media/'+image_file)
             answers  = val['data']
             suggestion = val['suggestion']
