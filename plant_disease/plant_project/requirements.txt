@@ -107,7 +107,7 @@ sympy==1.5.1
 tb-nightly==1.15.0a20190821
 tensor2tensor==1.14.1
 tensorboard==1.14.0
-tensorflow==1.14.0
+tensorflow==2.3.1
 tensorflow-cpu==1.15.0rc0
 tensorflow-datasets==2.0.0
 tensorflow-estimator==1.14.0
