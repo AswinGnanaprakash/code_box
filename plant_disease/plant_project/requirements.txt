@@ -16,7 +16,7 @@ dill==0.3.1.1
 Django==2.0.10
 django-cors-headers==2.4.0
 django-hosts==3.0
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 dopamine-rl==3.0.1
 entrypoints==0.3
 enum34==1.1.6
